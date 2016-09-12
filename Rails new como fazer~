@@ -1,0 +1,47 @@
+Rails para mostrar as opções
+
+Rails new emprego-ja   -B -T    (B = skip-bundle T = skip-test)
+
+despois de rodar o rails news:
+
+retira os comentarios do Gemfile
+retira do gemfile o "web-console"
+
+olha no github na internet e tem como add lá.
+(adicione perto do byebug)
+add gem rspec-rails
+add gem capybara
+
+criar outro grupo para add essa gem
+group :test do
+	gem 'simplecov', require: false
+end
+
+gem para debugar
+gem pry byebug  colocar no lugar da byebug
+
+
+agora sim da o bundle install
+depois do bundle
+
+rails generate rspec:install
+
+
+abra o arquivo xxxxx add o trecho abaixo no topo
+if ENV['RAILS_ENV'] == 'test'
+require 'simplecov'
+SimpleCov.start 'rails'
+
+no aquivo .gitignore add coverage no final      ()
+
+Add factory_girl_rails to your Gemfile:
+
+group :development, :test do
+  gem 'factory_girl_rails'
+end
+
+
+bundle check
+
+
+

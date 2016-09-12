@@ -1,0 +1,16 @@
+
+  <h1><%= @job.title %></h1>
+  <p class='bold'>Empresa</p>
+  <p><%= @job.company %></p>
+  <p class='bold'>Localização</p>
+  <p><%= @job.location %></p>
+  <p class='bold'>Categoria</p>
+  <p><%= @job.category %></p>
+  <p class='bold'>Descrição</p>
+  <p><%= @job.description %></p>
+
+  <% if @job.featured? %>
+    <p> <strong> Destaque </strong></p>
+  <% end %>
+
+<%= link_to('Voltar',root_path) %>

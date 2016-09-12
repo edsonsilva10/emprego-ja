@@ -1,0 +1,15 @@
+<h1>Emprego Já</h1>
+
+<% @jobs.each do |job| %>
+
+  <h1><%= link_to(job.title,job) %></h1>
+  <p class='bold'>Empresa</p>
+  <p><%= job.company %></p>
+  <p class='bold'>Localização</p>
+  <p><%= job.location %></p>
+
+  <% if job.featured? %>
+    <p> <strong> Destaque </strong></p>
+  <% end %>
+
+<% end %>
